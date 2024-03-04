@@ -12,6 +12,7 @@ ENV GRADLE_HOME="/opt/gradle/gradle-7.6.4"
 ENV PATH="$PATH:$GRADLE_HOME/bin"
 
 # Setup Cordova
+RUN $ANDROID_SDK_ROOT/tools/bin/sdkmanager --install "build-tools;33.0.2"
 RUN npm i -g cordova@12.0.0
 
 COPY entrypoint.sh /usr/src/entrypoint.sh
