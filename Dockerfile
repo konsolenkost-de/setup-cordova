@@ -1,7 +1,7 @@
 FROM runmymind/docker-android-sdk:ubuntu-standalone
 
 # Setup Android SDK
-RUN su android -c '/opt/tools/android-accept-licenses.sh "${ANDROID_HOME}/sdkmanager ${SDKMNGR_OPTS} \"build-tools;33.0.2\""'
+RUN su android -c '/opt/tools/android-accept-licenses.sh "sdkmanager ${SDKMNGR_OPTS} \"build-tools;33.0.2\""'
 
 # Setup NodeJS
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
