@@ -4,7 +4,7 @@ FROM runmymind/docker-android-sdk:ubuntu-standalone
 RUN su android -c '/opt/tools/android-accept-licenses.sh "${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager ${SDKMNGR_OPTS} \"build-tools;33.0.2\""'
 
 # Setup NodeJS
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs && \
     echo "safe-perm=true" > ~/.npmrc
     
